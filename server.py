@@ -22,6 +22,6 @@ while True:                # forever
       total_value += 5*int(element[1])
     else:
       str_back = element[0] + 'not in stock'
-  str_back = '\n soma total: ' + str(total_value)
-  conn.send(pickle.dumps(str_back)) # return the total value of the buy
+  string_return = '\n soma total: ' + str(total_value) + str_back
+  conn.send(pickle.dumps(string_return)) # return the total value of the buy
 conn.close()               # close the connection
