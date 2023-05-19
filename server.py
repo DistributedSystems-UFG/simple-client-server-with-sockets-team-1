@@ -21,7 +21,7 @@ while True:                # forever
     elif element[0] == 'abacaxi':
       total_value += 5*int(element[1])
     else:
-      str_back = element[0] + 'not in stock'
+      str_back = ' ' + element[0] + 'not in stock '
   string_return = '\n soma total: ' + str(total_value) + str_back
   conn.send(pickle.dumps(string_return)) # return the total value of the buy
 conn.close()               # close the connection
